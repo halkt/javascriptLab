@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>sample</title>
+</head>
+<body>
+  <input type="text" id="result">
+  <input type="text" id="process">
+  <div>
+    <input type="button" value="1" onclick="edit(this)">
+    <input type="button" value="2" onclick="edit(this)">
+    <input type="button" value="3" onclick="edit(this)">
+    <input type="button" value="+" onclick="edit(this)">
+  </div>
+  <div>
+    <input type="button" value="4" onclick="edit(this)">
+    <input type="button" value="5" onclick="edit(this)">
+    <input type="button" value="6" onclick="edit(this)">
+    <input type="button" value="-" onclick="edit(this)">
+  </div>
+  <div>
+    <input type="button" value="7" onclick="edit(this)">
+    <input type="button" value="8" onclick="edit(this)">
+    <input type="button" value="9" onclick="edit(this)">
+    <input type="button" value="/" onclick="edit(this)">
+  </div>
+  <div>
+    <input type="button" value="0" onclick="edit(this)">
+    <input type="button" value="." onclick="edit(this)">
+    <input type="button" value="*" onclick="edit(this)">
+    <input type="button" value="=" onclick="calc()">
+  </div>
+  <script language="javascript" type="text/javascript">
+    const result = document.querySelector('#result');
+    const process = document.querySelector('#process');
+    function edit(elem) {
+      result.value = result.value + elem.value;
+      process.value = process.value + elem.value;
+    }
+    function calc() {
+      result.value = new Function("return " + result.value)();
+    }
+  </script>
+</body>
+</html>
