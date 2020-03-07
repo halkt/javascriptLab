@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+window.addEventListener('load', () => {
   const btn = document.querySelector('#btn');
   const modal = document.querySelector('#modal');
   const closeBtn = document.querySelector('#closeBtn');
@@ -9,4 +9,5 @@ document.addEventListener("DOMContentLoaded", function(){
   btn.addEventListener('click', () => {
     modal.style.display = 'block';
   })
-}, false);
+});
+
